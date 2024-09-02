@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Komposition. 1974. Variation</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+/* 
+ Same as max_bill-komposition-1974-b.html, except drawRect() is edited
+ */
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // define colors as variables
+    let navy = color(30, 40, 79);
+    let orange = color(231, 188, 0);
+    let pink = color(190, 119, 175);
+    let green = color(0, 155, 70);
+   
+    // set the background color
+    background(navy);
+    // remove stroke
+    noStroke(); 
+
+    // draw shapes
+    translate(250, 250);
+    drawUnits(orange, pink);
+    rotate(90);
+    drawUnits(orange, green);
+    rotate(90);
+    drawUnits(orange, pink);
+    rotate(90);
+    drawUnits(orange, green);    
+}
+
+function drawUnits(color1, color2) {
+    // save current transform matrix
+    push();
+    // play with transformations and shapes
+    rotate(30);
+    // bottom triangle
+    fill(color2);
+    triangle(-250, -250, 0, -250, -250, 0);
+    // play with transformations and shapes
+    scale(0.7);
+    rotate(-15);
+    // top triangle
+    fill(color1);
+    triangle(-250, -250, -105, -250, -250, -105);
+    // restore transform matrix
+    pop();
+}
+
+</script>
+</body>

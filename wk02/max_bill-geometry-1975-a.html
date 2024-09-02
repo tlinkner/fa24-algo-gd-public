@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Geometry. 1975. Reproduction</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // set the background color
+    background(213, 218, 217);
+    // remove stroke
+    noStroke(); 
+
+    // yellow rect
+    fill(255, 218, 0);
+    rect(60, 10, 190, 480);
+
+    // teal triangle
+    fill(0, 222, 202);
+    triangle(60, 10, 250, 490, 60, 490);
+
+    // pink triangle
+    fill(255, 182, 237);
+    triangle(250, 10, 250, 490, 60, 490);
+
+    // orange triangle
+    fill(255, 119, 0);
+    triangle(250, 10, 250, 490, 155, 490);
+
+    // dark orange rect
+    fill(255, 61, 0);
+    rect(250, 10, 190, 480);
+
+    // green triangle
+    fill(0, 141, 0);
+    triangle(250, 10, 440, 490, 250, 490);
+
+    // purple triangle
+    fill(125, 98, 167);
+    triangle(440, 10, 440, 490, 250, 490);
+
+    // magenta triangle
+    fill(255, 0, 65);
+    triangle(440, 10, 440, 490, 345, 490);    
+}
+
+</script>
+</body>

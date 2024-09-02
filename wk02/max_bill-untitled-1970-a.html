@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Untitled. 1970. Reproduction</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // set the background color
+    background(190, 190, 190);
+    // remove stroke
+    noStroke(); 
+
+    // blue triange
+    fill(13, 89, 170);
+    triangle(0, 0, 500, 0, 250, 250);
+
+    // red triange
+    fill(165, 0, 0);
+    triangle(500, 0, 500, 500, 0, 500);
+
+    // yellow triange
+    fill(202, 141, 0);
+    triangle(0, 0, 250, 250, 0, 500);
+
+    // small blue triangle
+    fill(13, 89, 170);
+    triangle(210, 500, 355, 355, 500, 500);
+
+    // small yellow triangle
+    fill(202, 141, 0);
+    triangle(355, 355, 500, 210, 500, 500);
+
+    // inner grey box 
+    fill(190, 190, 190);
+    square(145, 145, 210);
+
+    // outer grey frame
+    noFill();
+    stroke(190, 190, 190);
+    strokeWeight(40);
+    square(20, 20, 460);
+}
+
+</script>
+</body>

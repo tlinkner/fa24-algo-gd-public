@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Hommage à Picasso. 1972. Reproduction</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // set the background color
+    background(46, 34, 33);
+    // remove stroke
+    noStroke(); 
+
+    // blue rectangle
+    fill(0, 166, 234);
+    rect(130, 70, 240, 60);
+
+    // green rectangle
+    fill(0, 186, 122);
+    rect(370, 130, 60, 240);
+
+    // yellow rectangle
+    fill(255, 194, 0);
+    rect(130, 370, 240, 60);
+
+    // red rectangle
+    fill(234, 42, 39);
+    rect(70, 130, 60, 240);
+
+    // yellow triange
+    fill(255, 194, 0);
+    triangle(190, 190, 310, 190, 250, 250);
+
+    // red triange
+    fill(234, 42, 39);
+    triangle(310, 190, 310, 310, 250, 250);
+
+    // blue triange
+    fill(0, 166, 234);
+    triangle(310, 310, 190, 310, 250, 250);
+
+    // green triange
+    fill(0, 186, 122);
+    triangle(190, 310, 190, 190, 250, 250);
+
+    // white masking trianges
+    fill(239, 239, 239);
+    triangle(0, 0, 260, 0, 0, 260);
+    triangle(240, 0, 500, 0, 500, 260);
+    triangle(500, 240, 500, 500, 240, 500);
+    triangle(260, 500, 0, 500, 0, 240);    
+}
+
+</script>
+</body>

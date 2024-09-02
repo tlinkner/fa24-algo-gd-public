@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Geometry. 1975. Refined</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // define colors as variables
+    let white = color(255, 255, 255);
+    let yellow = color(255, 218, 0);
+    let teal = color(0, 222, 202);
+    let pink = color(255, 182, 237);
+    let orange = color(255, 119, 0);
+    let darkOrange = color(255, 61, 0);
+    let green = color(0, 141, 0);
+    let purple = color(125, 98, 167);
+    let magenta = color(255, 0, 65);
+    
+    // set the background color
+    background(white);
+    // remove stroke
+    noStroke(); 
+
+    translate(60, 10);
+    drawUnit(yellow, teal, pink, orange);
+    translate(180, 0);
+    drawUnit(darkOrange, green, purple, magenta);
+
+}
+
+function drawUnit(c1, c2, c3, c4){
+    // rect
+    fill(c1);
+    rect(0, 0, 190, 480);
+    // triangle
+    fill(c2);
+    triangle(0, 0, 180, 480, 0, 480);
+    // triangle
+    fill(c3);
+    triangle(190, 0, 190, 480, 0, 480);
+    // triangle
+    fill(c4);
+    triangle(190, 0, 190, 480, 95, 480);
+}
+
+</script>
+</body>

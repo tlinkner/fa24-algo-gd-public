@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Radiation of Pink. 1973. Variation</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+/* 
+ Same as max_bill-radiation_of_pink-1973-b.html, except drawSide() and drawTriangle() are modified
+ */
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw() {
+    // define colors as variables
+    let grey = color(239, 239, 239);
+    let white = color(255, 255, 255);
+    let pink = color(236, 152, 182);
+    let yellow = color(234, 206, 0);
+    let red = color(215, 21, 29);
+    let blue = color(58, 121, 177);
+    let green = color(175, 198, 0);
+   
+    // set the background color
+    background(grey);
+    // remove stroke
+    noStroke(); 
+
+    translate(250, 250);
+
+    // pink square
+    fill(pink);
+    square(-125, -125, 250);
+
+    drawSide(green, blue);
+    rotate(90);
+    drawSide(yellow, red);
+    rotate(90);
+    drawSide(yellow, blue);
+    rotate(90);
+    drawSide(yellow, red);
+
+    // white masking trianges
+    fill(grey);
+    drawTriangle();
+    rotate(90);
+    drawTriangle();
+    rotate(90);
+    drawTriangle();
+    rotate(90);
+    drawTriangle();    
+}
+
+function drawSide(color1, color2){
+    // save current transform matrix
+    push();
+    fill(color1);
+    // play with transformations
+    rotate(15);
+
+    // play with the numbers, try other shapes
+    rect(-125, -250, 250, 60);
+    fill(color2);
+    rect(-125, -180, 250, 60);
+    // restore transformation matrix
+    pop();
+}
+
+function drawTriangle(){
+    // save current transform matrix
+    push();
+    // play with transformations
+    scale(1.3)
+    triangle(-250, -250, 0, -250, -250, 0);
+    // restore transformation matrix
+    pop();
+}
+
+
+
+</script>
+</body>

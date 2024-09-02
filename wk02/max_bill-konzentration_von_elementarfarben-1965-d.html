@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Konzentration von elementarfarben. 1965. Variation</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+/* 
+ Same as max_bill-konzentration_von_elementarfarben-1965-c.html, except code is in the draw() function for animation
+
+ */
+
+// define colors as variables
+let grey, white, blue, red, gold, tan;
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // define colors as variables
+    let grey = color(213, 218, 217);
+    let white = color(255, 255, 255);
+    let blue = color(68, 123, 190);
+    let red = color(183, 32, 37);
+    let gold = color(221, 175, 38);
+    let tan = color(239, 234, 222);
+
+
+    // set the background color
+    background(grey);
+    // remove stroke
+    noStroke(); 
+
+    translate(250, 250);
+
+    // save current transform matrix
+    push();
+
+    // play with transformations and shapes
+    rotate(frameCount/5);
+
+    // red and blue rectangles
+    drawBackgroundUnit(blue, red)
+
+    // play with transformations and shapes
+    rotate(frameCount/4);
+
+    // gold rectangle
+    fill(gold);
+    rect(-45, -250, 75, 500);
+
+    // play with transformations and shapes
+    rotate(frameCount/3);
+
+    // tan rectangle
+    fill(tan);
+    rect(-20, -250, 25, 500);
+
+    // restore transform matrix
+    pop();
+
+    // grey masking trianges
+    fill(grey);
+    triangle(-250, -250, 10, -250, -250, 10);
+    triangle(-10, -250, 250, -250, 250, 10);
+    triangle(250, -10, 250, 250, -10, 250);
+    triangle(-250, -10, 10, 250, -250, 250);
+}
+
+function drawBackgroundUnit(color1, color2){
+    // blue rectangle
+    fill(color1);
+    rect(-250, -250, 250, 500);
+
+    // red rectangle
+    fill(color2);
+    rect(0, -250, 250, 500);
+}
+
+
+</script>
+</body>

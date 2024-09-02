@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Konzentration von elementarfarben. 1965. Reproduction</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // set the background color
+    background(213, 218, 217);
+    // remove stroke
+    noStroke(); 
+
+    translate(250, 250);
+
+    push();
+
+    rotate(4);
+
+    // blue rectangle
+    fill(68, 123, 190);
+    rect(-250, -250, 250, 500);
+
+    // red rectangle
+    fill(183, 32, 37);
+    rect(0, -250, 250, 500);
+
+    // gold rectangle
+    fill(221, 175, 38);
+    rect(-45, -250, 75, 500);
+
+    rotate(-7);
+
+    // tan rectangle
+    fill(239, 234, 222);
+    rect(-20, -250, 25, 500);
+
+    pop();
+
+    // white masking trianges
+    fill(213, 218, 217);
+    triangle(-250, -250, 10, -250, -250, 10);
+    triangle(-10, -250, 250, -250, 250, 10);
+    triangle(250, -10, 250, 250, -10, 250);
+    triangle(-250, -10, 10, 250, -250, 250);    
+}
+
+</script>
+</body>

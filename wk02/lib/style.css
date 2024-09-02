@@ -1,0 +1,12 @@
+body {
+    color: rgb(255,255,255);
+    background-color: rgb(46,52,64);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas, canvas {
+    background-color: rgb(255,255,255);
+}
+

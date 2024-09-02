@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Untitled. 1985. Refined</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // define colors as variables
+    let grey = color(213, 218, 217);
+    let green = color(37, 134, 64);
+    let blue = color(32, 108, 204);
+    let purple = color(100, 40, 102);
+    let red = color(179, 23, 14);
+    
+    // set the background color
+    background(grey);
+    // remove stroke
+    noStroke();
+
+    // move to the center
+    translate(width/2, height/2);
+    rotate(-45)
+
+    // green
+    translate(-180, -180)
+    drawRect(green);
+    // blue
+    translate(60, 0)
+    drawRect(blue);
+    // purple
+    translate(60, 0)
+    drawRect(purple);
+    // red
+    translate(60, 0)
+    drawRect(red);
+    // blue
+    rotate(90);
+    translate(0, -180)
+    drawRect(blue);
+    // purple
+    translate(60, 0)
+    drawRect(purple);
+    // red
+    translate(60, 0)
+    drawRect(red);
+    // green
+    translate(60, 0)
+    drawRect(green);
+    // purple
+    rotate(90);
+    translate(0, -180)
+    drawRect(purple);
+    // red
+    translate(60, 0)
+    drawRect(red);
+    // green
+    translate(60, 0)
+    drawRect(green);
+    // blue
+    translate(60, 0)
+    drawRect(blue);
+    // red
+    rotate(90);
+    translate(0, -180)
+    drawRect(red);
+    // green
+    translate(60, 0)
+    drawRect(green);
+    // blue
+    translate(60, 0)
+    drawRect(blue);
+    // purple
+    translate(60, 0)
+    drawRect(purple);    
+}
+
+// simplify drawing with a function
+function drawRect(color) {
+    fill(color);
+    rect(0, 0, 60, 120);
+}
+
+</script>
+</body>

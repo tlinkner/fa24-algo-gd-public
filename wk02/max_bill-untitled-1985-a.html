@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Untitled. 1985. Reproduction</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // set the background color
+    background(213, 218, 217);
+    // remove stroke
+    noStroke(); 
+
+    // move to the center
+    translate(width/2, height/2);
+    rotate(-45)
+
+    // green
+    fill(37, 134, 64);
+    rect(-180, -180, 60, 120);
+    // blue
+    fill(32, 108, 204);
+    rect(-120, -180, 60, 120);
+    // purple
+    fill(100, 40, 102);
+    rect(-60, -180, 60, 120);
+    // red
+    fill(179, 23, 14);
+    rect(0, -180, 60, 120);
+    // blue
+    fill(32, 108, 204);
+    rect(60, -180, 120, 60);
+    // purple
+    fill(100, 40, 102);
+    rect(60, -120, 120, 60);
+    // red
+    fill(179, 23, 14);
+    rect(60, -60, 120, 60);
+    // green
+    fill(37, 134, 64);
+    rect(60, 0, 120, 60);
+    // purple
+    fill(100, 40, 102);
+    rect(120, 60, 60, 120);
+    // red
+    fill(179, 23, 14);
+    rect(60, 60, 60, 120);
+    // green
+    fill(37, 134, 64);
+    rect(0, 60, 60, 120);
+    // blue
+    fill(32, 108, 204);
+    rect(-60, 60, 60, 120);
+    // red
+    fill(179, 23, 14);
+    rect(-180, 120, 120, 60);
+    // green
+    fill(37, 134, 64);
+    rect(-180, 60, 120, 60);
+    // blue
+    fill(32, 108, 204);
+    rect(-180, 0, 120, 60);
+    // purple
+    fill(100, 40, 102);
+    rect(-180, -60, 120, 60);    
+}
+
+</script>
+</body>

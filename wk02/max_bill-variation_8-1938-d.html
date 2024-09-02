@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Variation 8. 1938. Variation</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+/* 
+ Same as max_bill-variation_8-1938-b.html, except code is in the draw() function for animation
+ */
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // define colors as variables
+    let black = color(29, 24, 25)
+    let purple = color(179, 98, 131);
+    let orange = color(226, 126, 55);
+    let blue = color(49, 64, 126);
+    let green = color(175, 170, 85);
+    let red = color(199, 49, 46);
+    let yellow = color(239, 170, 53)
+
+    // set the background color
+    background(black);
+    // remove stroke
+    noStroke(); 
+
+    // draw shapes
+    translate(250, 250);
+    // purple circle
+    drawUnit(purple);
+    // orange circle
+    translate(-15, 15);
+    scale(0.88);
+    drawUnit(orange);
+    // blue circle
+    translate(-15, -20);
+    scale(0.87);
+    drawUnit(blue);
+    // green circle
+    translate(25, -5);
+    scale(0.86);
+    drawUnit(green);
+    // red circle
+    translate(-30, 20);
+    scale(0.82);
+    drawUnit(red);
+    // yellow circle
+    translate(20, -30);
+    scale(0.86);
+    drawUnit(yellow);    
+}
+
+function drawUnit(color){
+    // play with transformations and shapes
+    rotate(5 + frameCount/10);
+    // play with the numbers, try other shapes
+    fill(color);
+    let size = 350;
+    square(-size/2 + (sin(frameCount) * 30), -size/2, 350);
+}
+
+</script>
+</body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Bill. Untitled. 1970. Refinement</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // define colors as variables
+    let grey = color(190, 190, 190);
+    let blue = color(13, 89, 170);
+    let red = color(165, 0, 0);
+    let yellow = color(202, 141, 0);
+   
+    // set the background color
+    background(grey);
+    // remove stroke
+    noStroke(); 
+
+    // draw shapes
+    translate(250, 250);
+
+    push();
+    // blue triangle
+    drawUnit(blue);
+    rotate(90);
+    // red triangle 1
+    drawUnit(red);
+    rotate(90);
+    // red triangle 2
+    drawUnit(red);
+    rotate(90);
+    // yellow triangle
+    drawUnit(yellow);
+    // inner grey box 
+    fill(grey);
+    square(-105, -105, 210);
+    rotate(270);
+    translate(-105, -105);
+    drawUnit(blue);
+    rotate(-90);
+    drawUnit(yellow);
+    pop();
+
+    // outer grey frame
+    noFill();
+    stroke(grey);
+    strokeWeight(40);
+    square(-230, -230, 460);    
+}
+
+function drawUnit(color){
+    
+    fill(color);
+    triangle(-250, -250, 250, -250, 0, 0);
+
+}
+
+</script>
+</body>
