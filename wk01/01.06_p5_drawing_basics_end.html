@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P5 Drawing Basics: Variables and Functions</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<script src="lib/p5.min.js"></script>
+<script src="lib/scripts.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    // use degrees instead of radians
+    angleMode(DEGREES);
+}
+
+function draw(){
+    // set the background color
+    background(255);
+    drawGrid(width,height,10);
+
+    // save a color in a variable
+    let lime = color(0, 255, 0);
+    let blue = color(0, 0, 255);
+
+    // move to the pen
+    translate(100, 100);
+    drawDot(lime);
+
+    // move to the pen
+    translate(100, 100);
+    drawDot(blue);
+
+    // move to the pen
+    translate(100, 100);
+    drawDot(lime);
+}
+
+/*
+ 
+ A function is a block code you can call as many times as you want
+ It is useful to group functinoality.
+ The parameter `color` let's us pass varables to the code 
+ so it can change with each use.
+
+ */
+function drawDot(color){
+    noStroke();
+    fill(color);
+    circle(0, 0, 100);
+}
+
+</script>
+</body>

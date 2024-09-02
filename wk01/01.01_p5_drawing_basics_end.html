@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P5 Drawing Basics: Elementary Shapes</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<script src="lib/p5.min.js"></script>
+<script src="lib/scripts.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+}
+
+function draw(){
+    // set the background color
+    background(255);
+    drawGrid(width,height,10);
+
+    // draw a square
+    // x, y, side
+    square(50, 50, 100);
+    
+    // draw a rectangle
+    // x, y, w, h
+    rect(200, 50, 100, 50);
+
+    // draw a circle
+    // cx, cy, d
+    circle(100, 250, 100);
+
+    // draw an ellipse
+    // cx, cy, d
+    ellipse(250, 230, 100, 50);
+
+    // draw an arc
+    // x, y, w, h, start angle, stop angle
+    // 360 degrees = 2 * PI radians
+    arc(100, 400, 100, 100, PI * 1.5, PI * 2);
+
+    // draw a closed arc (pie)
+    // x, y, w, h, start angle, stop angle, mode
+    // 360 degrees = 2 * PI radians
+    arc(250, 400, 100, 100, 0, PI * 1.5, PIE);
+
+    // draw a closed chord (pie)
+    // x, y, w, h, start angle, stop angle, mode
+    // 360 degrees = 2 * PI radians
+    arc(400, 400, 100, 100, PI, PI * 1.5, CHORD);
+}
+
+</script>
+</body>

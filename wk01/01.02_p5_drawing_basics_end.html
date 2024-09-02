@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P5 Drawing Basics: Lines and Polygons</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<script src="lib/p5.min.js"></script>
+<script src="lib/scripts.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+}
+
+function draw(){
+    // set the background color
+    background(255);
+    drawGrid(width,height,10);
+
+    // draw a line
+    // x1, y1, x2, y2
+    line(50, 50, 150, 150);
+
+    // draw a triangle
+    // x1, y1, x2, y2, x3, y3
+    triangle(200, 150, 300, 150, 250, 50);
+
+    // draw a polygon
+    // start the shape definition
+    beginShape(); 
+    // points, x, y
+    vertex(50, 230);
+    vertex(100, 200);
+    vertex(170, 270);
+    vertex(140, 300);
+    vertex(70, 300);
+    // end the shape definition and close
+    endShape(CLOSE);  
+}
+
+</script>
+</body>
