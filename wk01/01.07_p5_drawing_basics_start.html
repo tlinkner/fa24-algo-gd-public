@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P5 Drawing Basics: Animation Loop</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<script>
+
+// global scope variable
+let pos = 0;
+
+function setup() {
+  createCanvas(500, 500);
+  // un-comment to stop animation
+  // noLoop();
+  angleMode(DEGREES);
+  rectMode(CENTER);
+}
+
+function draw() {
+  background(255); // Set background to white
+  noStroke();
+
+  // console log
+  // open in Google Chrome:
+  // - right click, inspect (CMD + OPT + J)
+  console.log(
+    // a built-in p5 variable 
+    frameCount, 
+    // a repeating series (0-9)
+    frameCount % 10,
+    // built-in sine function
+    sin(frameCount)
+  );
+
+  // animate across the screen
+
+  // animate across the screen, looping
+
+  // animate across the screen, looping with velocity
+
+  // animate using global scope variable
+
+  // oscillate using a sine wave
+
+  // oscillate transforms
+
+}
+
+</script>
+</body>

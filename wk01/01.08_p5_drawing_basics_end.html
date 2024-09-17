@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P5 Drawing Basics: Graphical User Interface (GUI)</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<!-- Import the p5.js library -->
+<script src="lib/p5.min.js"></script>
+<!-- Import the dat.gui library -->
+<script src="lib/dat.gui.min.js"></script>
+<script>
+
+// global scope variable
+let config = {
+    "fill": true,
+    "xPos": 250, 
+    "yPos": 250, 
+};
+
+function setup() {
+    createCanvas(500, 500);
+    // store gui instance in a variable
+    let gui = new dat.GUI();
+    // add gui widgets    
+    gui.add(config, "fill");
+    gui.add(config, "xPos", 0, 500);
+    gui.add(config, "yPos", 0, 500);
+}
+
+function draw() {
+  background(255); // Set background to white
+  noStroke();
+
+  // set fill/no fill based on config object
+  if (config.fill) {
+    noStroke();
+    fill("blue")
+  } else {
+    stroke("blue");
+    noFill();
+  }
+
+  // draw a circle using config object variables
+  circle(config.xPos, config.yPos, 50);
+
+}
+
+</script>
+</body>

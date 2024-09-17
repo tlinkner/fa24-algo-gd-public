@@ -14,36 +14,46 @@
 function setup(){
     // create a canvas to draw on
     createCanvas(500, 500);
+    // use degrees instead of radians
+    angleMode(DEGREES); 
+    // draw rects and squares from the center
+    rectMode(CENTER); 
 }
 
-function draw(){
-    // use degrees instead of radians
-    angleMode(DEGREES);
-    
+function draw(){    
     // set the background color
     background(255);
     drawGrid(width,height,10);
 
-    // move the pen
+    // move the pen 100, 100
 
     // draw a red square
 
+    // move the pen 150, 0
+
     // save current transform matrix
 
-    // move the pen
+    // rotate the canvas 45 degrees
 
-    // rotate the canvas
+    // draw ablue square
 
-    // center using negative 1/2 size
-
+    // draw a circle -- all previous transformations apply
 
     // restore transform matrix
 
+    
+    // move the pen 150, 0
+    
+
     // this square won't be rotated, color will be red
 
+    
     // this will distort any drawing after the scale change
-
+    scale(0.5, 1);
+    fill("lime");
+    circle(50, 300, 100);    
 }
+
 
 </script>
 </body>
