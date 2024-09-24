@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type Module</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);  
+}
+
+function draw(){
+    // set the background color
+    background(255);
+
+    // draw your type module
+    let a = frameCount / 3;
+    rectMode(CENTER);
+    translate(width * 0.15, width * 0.15);
+    rotate(a);
+    noStroke();
+    fill("red");
+    rect(0, 0, width * 3, width * 0.3);
+
+
+}
+
+</script>
+</body>

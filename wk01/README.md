@@ -153,6 +153,12 @@ Call the function
 `drawDot(lime);`
 
 
+## 01.07 Animation Loop
+
+
+## 01.08 Graphical User Interface (GUI)
+
+
 ## P5 Starter Template
 
 ```

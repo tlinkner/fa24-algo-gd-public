@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type Module</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<script src="lib/p5.min.js"></script>
+<script>
+
+function setup(){
+    // create a canvas to draw on
+    createCanvas(500, 500);
+    angleMode(DEGREES);  
+}
+
+function draw(){
+    // set the background color
+    background(200);
+
+    // draw your type module in a new graphics context
+    typeModule = createGraphics(500,500);
+    typeModule.background(255);
+    let a = frameCount / 30;
+    typeModule.rectMode(CENTER);
+    typeModule.translate(width * 0.15, width * 0.15);
+    typeModule.rotate(a);
+    typeModule.noStroke();
+    typeModule.fill("red");
+    typeModule.rect(0, 0, width * 3, width * 0.3);
+
+    // place an instance of your module
+    image(typeModule, 100, 100, 100, 100)
+
+    // place another instance, change the size or scale
+    image(typeModule, 300, 150, 20, 20)
+
+}
+
+</script>
+</body>

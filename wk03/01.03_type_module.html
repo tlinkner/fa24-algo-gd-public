@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type Module</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<script src="lib/p5.min.js"></script>
+<script>
+
+//  preload the template image
+function preload(){
+    template = loadImage('img/hello-font.png'); 
+}
+
+function setup(){
+    // create a canvas the same size as your template
+    createCanvas(template.width, template.height);
+    angleMode(DEGREES);  
+}
+
+function draw(){
+    // set the background color
+    background(200);
+
+    // draw your type module in a new graphics context
+    typeModule = createGraphics(500,500);
+    typeModule.background(255);
+    let a = frameCount / 30;
+    typeModule.rectMode(CENTER);
+    typeModule.translate(width * 0.15, width * 0.15);
+    typeModule.rotate(a);
+    typeModule.noStroke();
+    typeModule.fill("red");
+    typeModule.rect(0, 0, width * 3, width * 0.3);
+
+    // draw the template image
+    image(template, 0, 0, 441, 181)
+
+}
+
+</script>
+</body>

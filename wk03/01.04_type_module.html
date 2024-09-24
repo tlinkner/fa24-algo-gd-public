@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type Module</title>
+<link rel="stylesheet" href="lib/style.css">
+</head>
+<body>
+<script src="lib/p5.min.js"></script>
+<script>
+
+// global variables
+let grid;
+const cellW = 20;
+const cellH = 20;
+
+//  preload the template image
+function preload(){
+    template = loadImage('img/hello-font.png');
+}
+
+function setup(){
+    // create a canvas the same size as your template
+    // Create the canvas without any additional options
+    myCanvas = createCanvas(template.width, template.height);
+    // Access the HTML5 canvas element
+    let canvasElement = myCanvas.elt;
+    // Get the 2D rendering context with the 'willReadFrequently' property set to true
+    let context = canvasElement.getContext('2d', { willReadFrequently: true });
+
+    angleMode(DEGREES);  
+    const grid = getGridData(template,cellW, cellH);
+
+}
+
+function draw(){
+    // set the background color
+    background(200);
+
+    // draw your type module in a new graphics context
+    typeModule = createGraphics(500,500);
+    typeModule.background(255);
+    let a = frameCount / 30;
+    typeModule.rectMode(CENTER);
+    typeModule.translate(width * 0.15, width * 0.15);
+    typeModule.rotate(a);
+    typeModule.noStroke();
+    typeModule.fill("red");
+    typeModule.rect(0, 0, width * 3, width * 0.3);
+
+    // draw the template image
+    image(template, 0, 0, 441, 181)
+    // draw type module
+    image(typeModule, 0, 0, cellW, cellH);
+}
+
+function getGridData(templateImg, cellW, cellH){
+    nCols = floor(templateImg.width / cellW);
+    nRows = floor(templateImg.height / cellH);
+    n = nCols * nRows;
+
+    grid = [...Array(n)
+        .fill()
+        .map((d,i)=>{
+            const col = i % nCols;
+            const row = Math.floor(i/nCols);
+            const x = (col * cellW) + (cellW/2); // center x
+            const y = (row * cellH) + (cellH/2); // center y
+            return {
+                "x": x,
+                "y": y,
+                "val": templateImg.get(x,y)
+            }
+        })
+    ];
+    return grid;    
+}
+
+</script>
+</body>
